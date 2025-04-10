@@ -21,7 +21,12 @@ public class CalendrierAnnuel {
 		calendrier[11] = new Mois ("Décembre",31);
 	}	
 	
-	
+	public boolean estLibre(int jour, int mois) {
+		if(mois>=1 && mois <=12) {
+			return calendrier[mois].estLibre(jour);
+		}
+		return false;
+	}
 	
 	private static class Mois{
 		
